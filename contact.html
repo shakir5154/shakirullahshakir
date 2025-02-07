@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Shakir Ullah Shakir</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+        .header {
+            text-align: center;
+            padding: 50px;
+            background: #111;
+            color: white;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background: #222;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        h2, h3 {
+            color: #ddd;
+        }
+        nav {
+            text-align: center;
+            background: #111;
+            padding: 15px;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav a:hover {
+            color: #aaa;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        ul li a {
+            color: #aaa;
+            text-decoration: none;
+        }
+        ul li a:hover {
+            color: #fff;
+        }
+        .contact-form label, .contact-form input, .contact-form textarea {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            background: #333;
+            color: white;
+            border: 1px solid #555;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background: #555;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Contact Me</h1>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="publications.html">CV</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="container">
+        <h2>Get in Touch</h2>
+        <p>You can contact me via the following:</p>
+        <ul>
+            <li><strong>Email:</strong> shakirullahshakir999@gmail.com</li>
+            <li><strong>Mobile:</strong> 03439772277</li>
+            <li><strong>LinkedIn:</strong> <a href="#">Your LinkedIn Profile</a></li>
+            <li><strong>GitHub:</strong> <a href="#">Your GitHub Profile</a></li>
+            <li><strong>Twitter:</strong> <a href="#">Your Twitter Profile</a></li>
+        </ul>
+        <h3>Send a Message</h3>
+        <form class="contact-form" action="mailto:shakirullahshakir999@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</body>
+</html>
 
