@@ -6,7 +6,6 @@ body {
     background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb);
     color: #333;
     line-height: 1.6;
-    text-align: center;
 }
 
 /* Navigation Bar */
@@ -17,6 +16,7 @@ nav {
     width: 100%;
     top: 0;
     left: 0;
+    text-align: right; /* Align links to the right */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 nav a {
@@ -26,6 +26,7 @@ nav a {
     font-size: 18px;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
+    display: inline-block;
 }
 nav a:hover, nav a.active {
     color: #ffeb3b;
@@ -33,17 +34,27 @@ nav a:hover, nav a.active {
 
 /* Header */
 .header {
-    text-align: center;
-    padding: 80px 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 50px 50px;
     background: linear-gradient(135deg, #ff512f, #dd2476);
     color: white;
     border-bottom-left-radius: 50% 10%;
     border-bottom-right-radius: 50% 10%;
 }
+
+/* Align name and title to the left */
+.header-text {
+    flex: 1;
+    text-align: left;
+}
+
+/* Profile picture: rectangular and on the right */
 .header img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    width: 180px; /* Adjusted width */
+    height: 220px; /* Adjusted height */
+    border-radius: 10px; /* Rectangular shape */
     border: 4px solid #fff;
     transition: transform 0.3s ease-in-out;
 }
@@ -53,7 +64,9 @@ nav a:hover, nav a.active {
 
 /* Container */
 .container {
-    max-width: 700px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 900px;
     margin: 20px auto;
     padding: 20px;
     background: white;
@@ -61,16 +74,19 @@ nav a:hover, nav a.active {
     border-radius: 10px;
 }
 
-/* Section */
-.section {
-    margin-bottom: 20px;
+/* Move welcome text and introduction to the left */
+.text-section {
+    text-align: left;
+    flex: 2;
 }
+
 h1, h2 {
     color: #333;
 }
 
 /* Social Icons */
 .social-icons {
+    text-align: center;
     margin-top: 20px;
 }
 .social-icons a {
@@ -103,7 +119,16 @@ footer a:hover {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .header img {
+        margin-top: 20px;
+    }
     .container {
+        flex-direction: column;
+        text-align: center;
         width: 90%;
     }
     nav a {
